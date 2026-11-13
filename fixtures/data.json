@@ -1,0 +1,2207 @@
+{
+  "meta": {
+    "name": "设备使用寿命台",
+    "description": "intervals 是半开运行小时区间 [start_hour,end_hour)，负荷 load 是区间常数；不在区间内不累计暴露。",
+    "groups": [
+      "站点1",
+      "站点2",
+      "站点3"
+    ],
+    "default_cutoff": 2400,
+    "min_cutoff": 0,
+    "max_cutoff": 4800
+  },
+  "tables": {
+    "machines": [
+      {
+        "machine": "m000",
+        "site": "站点1",
+        "batch": "b0",
+        "installed_hour": 0
+      },
+      {
+        "machine": "m001",
+        "site": "站点2",
+        "batch": "b0",
+        "installed_hour": 100
+      },
+      {
+        "machine": "m002",
+        "site": "站点3",
+        "batch": "b0",
+        "installed_hour": 200
+      },
+      {
+        "machine": "m003",
+        "site": "站点1",
+        "batch": "b0",
+        "installed_hour": 300
+      },
+      {
+        "machine": "m004",
+        "site": "站点2",
+        "batch": "b0",
+        "installed_hour": 0
+      },
+      {
+        "machine": "m005",
+        "site": "站点3",
+        "batch": "b0",
+        "installed_hour": 100
+      },
+      {
+        "machine": "m006",
+        "site": "站点1",
+        "batch": "b0",
+        "installed_hour": 200
+      },
+      {
+        "machine": "m007",
+        "site": "站点2",
+        "batch": "b0",
+        "installed_hour": 300
+      },
+      {
+        "machine": "m008",
+        "site": "站点3",
+        "batch": "b1",
+        "installed_hour": 0
+      },
+      {
+        "machine": "m009",
+        "site": "站点1",
+        "batch": "b1",
+        "installed_hour": 100
+      },
+      {
+        "machine": "m010",
+        "site": "站点2",
+        "batch": "b1",
+        "installed_hour": 200
+      },
+      {
+        "machine": "m011",
+        "site": "站点3",
+        "batch": "b1",
+        "installed_hour": 300
+      },
+      {
+        "machine": "m012",
+        "site": "站点1",
+        "batch": "b1",
+        "installed_hour": 0
+      },
+      {
+        "machine": "m013",
+        "site": "站点2",
+        "batch": "b1",
+        "installed_hour": 100
+      },
+      {
+        "machine": "m014",
+        "site": "站点3",
+        "batch": "b1",
+        "installed_hour": 200
+      },
+      {
+        "machine": "m015",
+        "site": "站点1",
+        "batch": "b1",
+        "installed_hour": 300
+      },
+      {
+        "machine": "m016",
+        "site": "站点2",
+        "batch": "b2",
+        "installed_hour": 0
+      },
+      {
+        "machine": "m017",
+        "site": "站点3",
+        "batch": "b2",
+        "installed_hour": 100
+      },
+      {
+        "machine": "m018",
+        "site": "站点1",
+        "batch": "b2",
+        "installed_hour": 200
+      },
+      {
+        "machine": "m019",
+        "site": "站点2",
+        "batch": "b2",
+        "installed_hour": 300
+      },
+      {
+        "machine": "m020",
+        "site": "站点3",
+        "batch": "b2",
+        "installed_hour": 0
+      },
+      {
+        "machine": "m021",
+        "site": "站点1",
+        "batch": "b2",
+        "installed_hour": 100
+      },
+      {
+        "machine": "m022",
+        "site": "站点2",
+        "batch": "b2",
+        "installed_hour": 200
+      },
+      {
+        "machine": "m023",
+        "site": "站点3",
+        "batch": "b2",
+        "installed_hour": 300
+      },
+      {
+        "machine": "m024",
+        "site": "站点1",
+        "batch": "b3",
+        "installed_hour": 0
+      },
+      {
+        "machine": "m025",
+        "site": "站点2",
+        "batch": "b3",
+        "installed_hour": 100
+      },
+      {
+        "machine": "m026",
+        "site": "站点3",
+        "batch": "b3",
+        "installed_hour": 200
+      },
+      {
+        "machine": "m027",
+        "site": "站点1",
+        "batch": "b3",
+        "installed_hour": 300
+      },
+      {
+        "machine": "m028",
+        "site": "站点2",
+        "batch": "b3",
+        "installed_hour": 0
+      },
+      {
+        "machine": "m029",
+        "site": "站点3",
+        "batch": "b3",
+        "installed_hour": 100
+      },
+      {
+        "machine": "m030",
+        "site": "站点1",
+        "batch": "b3",
+        "installed_hour": 200
+      },
+      {
+        "machine": "m031",
+        "site": "站点2",
+        "batch": "b3",
+        "installed_hour": 300
+      },
+      {
+        "machine": "m032",
+        "site": "站点3",
+        "batch": "b4",
+        "installed_hour": 0
+      },
+      {
+        "machine": "m033",
+        "site": "站点1",
+        "batch": "b4",
+        "installed_hour": 100
+      },
+      {
+        "machine": "m034",
+        "site": "站点2",
+        "batch": "b4",
+        "installed_hour": 200
+      },
+      {
+        "machine": "m035",
+        "site": "站点3",
+        "batch": "b4",
+        "installed_hour": 300
+      },
+      {
+        "machine": "m036",
+        "site": "站点1",
+        "batch": "b4",
+        "installed_hour": 0
+      },
+      {
+        "machine": "m037",
+        "site": "站点2",
+        "batch": "b4",
+        "installed_hour": 100
+      },
+      {
+        "machine": "m038",
+        "site": "站点3",
+        "batch": "b4",
+        "installed_hour": 200
+      },
+      {
+        "machine": "m039",
+        "site": "站点1",
+        "batch": "b4",
+        "installed_hour": 300
+      },
+      {
+        "machine": "m040",
+        "site": "站点2",
+        "batch": "b5",
+        "installed_hour": 0
+      },
+      {
+        "machine": "m041",
+        "site": "站点3",
+        "batch": "b5",
+        "installed_hour": 100
+      },
+      {
+        "machine": "m042",
+        "site": "站点1",
+        "batch": "b5",
+        "installed_hour": 200
+      },
+      {
+        "machine": "m043",
+        "site": "站点2",
+        "batch": "b5",
+        "installed_hour": 300
+      },
+      {
+        "machine": "m044",
+        "site": "站点3",
+        "batch": "b5",
+        "installed_hour": 0
+      },
+      {
+        "machine": "m045",
+        "site": "站点1",
+        "batch": "b5",
+        "installed_hour": 100
+      },
+      {
+        "machine": "m046",
+        "site": "站点2",
+        "batch": "b5",
+        "installed_hour": 200
+      },
+      {
+        "machine": "m047",
+        "site": "站点3",
+        "batch": "b5",
+        "installed_hour": 300
+      }
+    ],
+    "intervals": [
+      {
+        "machine": "m000",
+        "start_hour": 0,
+        "end_hour": 500,
+        "load": 1.05,
+        "known_hour": 0
+      },
+      {
+        "machine": "m000",
+        "start_hour": 600,
+        "end_hour": 1100,
+        "load": 1.05,
+        "known_hour": 600
+      },
+      {
+        "machine": "m000",
+        "start_hour": 1200,
+        "end_hour": 1700,
+        "load": 0.62,
+        "known_hour": 1200
+      },
+      {
+        "machine": "m001",
+        "start_hour": 100,
+        "end_hour": 600,
+        "load": 0.77,
+        "known_hour": 100
+      },
+      {
+        "machine": "m001",
+        "start_hour": 700,
+        "end_hour": 1200,
+        "load": 1.24,
+        "known_hour": 700
+      },
+      {
+        "machine": "m001",
+        "start_hour": 1300,
+        "end_hour": 1800,
+        "load": 0.57,
+        "known_hour": 1300
+      },
+      {
+        "machine": "m001",
+        "start_hour": 1900,
+        "end_hour": 2400,
+        "load": 1.48,
+        "known_hour": 1900
+      },
+      {
+        "machine": "m002",
+        "start_hour": 200,
+        "end_hour": 700,
+        "load": 1.39,
+        "known_hour": 200
+      },
+      {
+        "machine": "m002",
+        "start_hour": 800,
+        "end_hour": 1300,
+        "load": 0.86,
+        "known_hour": 800
+      },
+      {
+        "machine": "m002",
+        "start_hour": 1400,
+        "end_hour": 1900,
+        "load": 1.15,
+        "known_hour": 1400
+      },
+      {
+        "machine": "m002",
+        "start_hour": 2000,
+        "end_hour": 2400,
+        "load": 1.28,
+        "known_hour": 2000
+      },
+      {
+        "machine": "m003",
+        "start_hour": 300,
+        "end_hour": 800,
+        "load": 0.53,
+        "known_hour": 300
+      },
+      {
+        "machine": "m003",
+        "start_hour": 900,
+        "end_hour": 1400,
+        "load": 0.51,
+        "known_hour": 900
+      },
+      {
+        "machine": "m003",
+        "start_hour": 1500,
+        "end_hour": 2000,
+        "load": 1.09,
+        "known_hour": 1500
+      },
+      {
+        "machine": "m003",
+        "start_hour": 2100,
+        "end_hour": 2400,
+        "load": 1.06,
+        "known_hour": 2100
+      },
+      {
+        "machine": "m004",
+        "start_hour": 0,
+        "end_hour": 500,
+        "load": 0.84,
+        "known_hour": 0
+      },
+      {
+        "machine": "m004",
+        "start_hour": 600,
+        "end_hour": 1100,
+        "load": 0.51,
+        "known_hour": 600
+      },
+      {
+        "machine": "m004",
+        "start_hour": 1200,
+        "end_hour": 1700,
+        "load": 0.6,
+        "known_hour": 1200
+      },
+      {
+        "machine": "m004",
+        "start_hour": 1800,
+        "end_hour": 2300,
+        "load": 1.29,
+        "known_hour": 1800
+      },
+      {
+        "machine": "m005",
+        "start_hour": 100,
+        "end_hour": 600,
+        "load": 0.84,
+        "known_hour": 100
+      },
+      {
+        "machine": "m005",
+        "start_hour": 700,
+        "end_hour": 1200,
+        "load": 1.47,
+        "known_hour": 700
+      },
+      {
+        "machine": "m005",
+        "start_hour": 1300,
+        "end_hour": 1800,
+        "load": 1.39,
+        "known_hour": 1300
+      },
+      {
+        "machine": "m005",
+        "start_hour": 1900,
+        "end_hour": 2400,
+        "load": 1.14,
+        "known_hour": 1900
+      },
+      {
+        "machine": "m006",
+        "start_hour": 200,
+        "end_hour": 700,
+        "load": 0.67,
+        "known_hour": 200
+      },
+      {
+        "machine": "m006",
+        "start_hour": 800,
+        "end_hour": 1300,
+        "load": 0.88,
+        "known_hour": 800
+      },
+      {
+        "machine": "m006",
+        "start_hour": 1400,
+        "end_hour": 1900,
+        "load": 0.74,
+        "known_hour": 1400
+      },
+      {
+        "machine": "m006",
+        "start_hour": 2000,
+        "end_hour": 2400,
+        "load": 1.12,
+        "known_hour": 2000
+      },
+      {
+        "machine": "m007",
+        "start_hour": 300,
+        "end_hour": 800,
+        "load": 0.56,
+        "known_hour": 300
+      },
+      {
+        "machine": "m007",
+        "start_hour": 900,
+        "end_hour": 1400,
+        "load": 1.18,
+        "known_hour": 900
+      },
+      {
+        "machine": "m007",
+        "start_hour": 1500,
+        "end_hour": 2000,
+        "load": 1.38,
+        "known_hour": 1500
+      },
+      {
+        "machine": "m007",
+        "start_hour": 2100,
+        "end_hour": 2400,
+        "load": 0.87,
+        "known_hour": 2100
+      },
+      {
+        "machine": "m008",
+        "start_hour": 0,
+        "end_hour": 500,
+        "load": 0.95,
+        "known_hour": 0
+      },
+      {
+        "machine": "m008",
+        "start_hour": 600,
+        "end_hour": 1100,
+        "load": 1.24,
+        "known_hour": 600
+      },
+      {
+        "machine": "m008",
+        "start_hour": 1200,
+        "end_hour": 1700,
+        "load": 0.51,
+        "known_hour": 1200
+      },
+      {
+        "machine": "m008",
+        "start_hour": 1800,
+        "end_hour": 2300,
+        "load": 1.39,
+        "known_hour": 1800
+      },
+      {
+        "machine": "m009",
+        "start_hour": 100,
+        "end_hour": 600,
+        "load": 1.28,
+        "known_hour": 100
+      },
+      {
+        "machine": "m009",
+        "start_hour": 700,
+        "end_hour": 1200,
+        "load": 1.38,
+        "known_hour": 700
+      },
+      {
+        "machine": "m009",
+        "start_hour": 1300,
+        "end_hour": 1800,
+        "load": 0.64,
+        "known_hour": 1300
+      },
+      {
+        "machine": "m009",
+        "start_hour": 1900,
+        "end_hour": 2400,
+        "load": 0.95,
+        "known_hour": 1900
+      },
+      {
+        "machine": "m010",
+        "start_hour": 200,
+        "end_hour": 700,
+        "load": 0.51,
+        "known_hour": 200
+      },
+      {
+        "machine": "m010",
+        "start_hour": 800,
+        "end_hour": 1300,
+        "load": 1.29,
+        "known_hour": 800
+      },
+      {
+        "machine": "m010",
+        "start_hour": 1400,
+        "end_hour": 1900,
+        "load": 1.48,
+        "known_hour": 1400
+      },
+      {
+        "machine": "m010",
+        "start_hour": 2000,
+        "end_hour": 2400,
+        "load": 0.69,
+        "known_hour": 2000
+      },
+      {
+        "machine": "m011",
+        "start_hour": 300,
+        "end_hour": 800,
+        "load": 1.33,
+        "known_hour": 300
+      },
+      {
+        "machine": "m011",
+        "start_hour": 900,
+        "end_hour": 1400,
+        "load": 0.73,
+        "known_hour": 900
+      },
+      {
+        "machine": "m011",
+        "start_hour": 1500,
+        "end_hour": 1800,
+        "load": 0.51,
+        "known_hour": 1500
+      },
+      {
+        "machine": "m012",
+        "start_hour": 0,
+        "end_hour": 500,
+        "load": 0.98,
+        "known_hour": 0
+      },
+      {
+        "machine": "m012",
+        "start_hour": 600,
+        "end_hour": 1100,
+        "load": 1.08,
+        "known_hour": 600
+      },
+      {
+        "machine": "m012",
+        "start_hour": 1200,
+        "end_hour": 1700,
+        "load": 0.94,
+        "known_hour": 1200
+      },
+      {
+        "machine": "m012",
+        "start_hour": 1800,
+        "end_hour": 2300,
+        "load": 0.71,
+        "known_hour": 1800
+      },
+      {
+        "machine": "m013",
+        "start_hour": 100,
+        "end_hour": 600,
+        "load": 0.79,
+        "known_hour": 100
+      },
+      {
+        "machine": "m013",
+        "start_hour": 700,
+        "end_hour": 1200,
+        "load": 0.97,
+        "known_hour": 700
+      },
+      {
+        "machine": "m013",
+        "start_hour": 1300,
+        "end_hour": 1800,
+        "load": 1.2,
+        "known_hour": 1300
+      },
+      {
+        "machine": "m013",
+        "start_hour": 1900,
+        "end_hour": 2400,
+        "load": 1.05,
+        "known_hour": 1900
+      },
+      {
+        "machine": "m014",
+        "start_hour": 200,
+        "end_hour": 700,
+        "load": 1.37,
+        "known_hour": 200
+      },
+      {
+        "machine": "m014",
+        "start_hour": 800,
+        "end_hour": 1300,
+        "load": 1.16,
+        "known_hour": 800
+      },
+      {
+        "machine": "m014",
+        "start_hour": 1400,
+        "end_hour": 1900,
+        "load": 1.42,
+        "known_hour": 1400
+      },
+      {
+        "machine": "m014",
+        "start_hour": 2000,
+        "end_hour": 2400,
+        "load": 0.98,
+        "known_hour": 2000
+      },
+      {
+        "machine": "m015",
+        "start_hour": 300,
+        "end_hour": 800,
+        "load": 0.94,
+        "known_hour": 300
+      },
+      {
+        "machine": "m015",
+        "start_hour": 900,
+        "end_hour": 1400,
+        "load": 1.19,
+        "known_hour": 900
+      },
+      {
+        "machine": "m015",
+        "start_hour": 1500,
+        "end_hour": 2000,
+        "load": 0.72,
+        "known_hour": 1500
+      },
+      {
+        "machine": "m015",
+        "start_hour": 2100,
+        "end_hour": 2400,
+        "load": 1.17,
+        "known_hour": 2100
+      },
+      {
+        "machine": "m016",
+        "start_hour": 0,
+        "end_hour": 500,
+        "load": 0.65,
+        "known_hour": 0
+      },
+      {
+        "machine": "m016",
+        "start_hour": 600,
+        "end_hour": 1100,
+        "load": 1.02,
+        "known_hour": 600
+      },
+      {
+        "machine": "m016",
+        "start_hour": 1200,
+        "end_hour": 1700,
+        "load": 0.99,
+        "known_hour": 1200
+      },
+      {
+        "machine": "m016",
+        "start_hour": 1800,
+        "end_hour": 2300,
+        "load": 1.42,
+        "known_hour": 1800
+      },
+      {
+        "machine": "m017",
+        "start_hour": 100,
+        "end_hour": 600,
+        "load": 0.69,
+        "known_hour": 100
+      },
+      {
+        "machine": "m017",
+        "start_hour": 700,
+        "end_hour": 1200,
+        "load": 1.22,
+        "known_hour": 700
+      },
+      {
+        "machine": "m017",
+        "start_hour": 1300,
+        "end_hour": 1800,
+        "load": 1.39,
+        "known_hour": 1300
+      },
+      {
+        "machine": "m017",
+        "start_hour": 1900,
+        "end_hour": 2400,
+        "load": 1.18,
+        "known_hour": 1900
+      },
+      {
+        "machine": "m018",
+        "start_hour": 200,
+        "end_hour": 700,
+        "load": 0.51,
+        "known_hour": 200
+      },
+      {
+        "machine": "m018",
+        "start_hour": 800,
+        "end_hour": 1300,
+        "load": 1.29,
+        "known_hour": 800
+      },
+      {
+        "machine": "m018",
+        "start_hour": 1400,
+        "end_hour": 1900,
+        "load": 0.84,
+        "known_hour": 1400
+      },
+      {
+        "machine": "m018",
+        "start_hour": 2000,
+        "end_hour": 2400,
+        "load": 0.66,
+        "known_hour": 2000
+      },
+      {
+        "machine": "m019",
+        "start_hour": 300,
+        "end_hour": 800,
+        "load": 0.6,
+        "known_hour": 300
+      },
+      {
+        "machine": "m019",
+        "start_hour": 900,
+        "end_hour": 1400,
+        "load": 1.02,
+        "known_hour": 900
+      },
+      {
+        "machine": "m019",
+        "start_hour": 1500,
+        "end_hour": 2000,
+        "load": 1.04,
+        "known_hour": 1500
+      },
+      {
+        "machine": "m019",
+        "start_hour": 2100,
+        "end_hour": 2400,
+        "load": 1.36,
+        "known_hour": 2100
+      },
+      {
+        "machine": "m020",
+        "start_hour": 0,
+        "end_hour": 500,
+        "load": 0.71,
+        "known_hour": 0
+      },
+      {
+        "machine": "m020",
+        "start_hour": 600,
+        "end_hour": 1100,
+        "load": 0.75,
+        "known_hour": 600
+      },
+      {
+        "machine": "m020",
+        "start_hour": 1200,
+        "end_hour": 1700,
+        "load": 0.9,
+        "known_hour": 1200
+      },
+      {
+        "machine": "m020",
+        "start_hour": 1800,
+        "end_hour": 2300,
+        "load": 0.68,
+        "known_hour": 1800
+      },
+      {
+        "machine": "m021",
+        "start_hour": 100,
+        "end_hour": 600,
+        "load": 1.4,
+        "known_hour": 100
+      },
+      {
+        "machine": "m021",
+        "start_hour": 700,
+        "end_hour": 1200,
+        "load": 1.03,
+        "known_hour": 700
+      },
+      {
+        "machine": "m021",
+        "start_hour": 1300,
+        "end_hour": 1800,
+        "load": 0.72,
+        "known_hour": 1300
+      },
+      {
+        "machine": "m021",
+        "start_hour": 1900,
+        "end_hour": 2400,
+        "load": 0.94,
+        "known_hour": 1900
+      },
+      {
+        "machine": "m022",
+        "start_hour": 200,
+        "end_hour": 700,
+        "load": 0.56,
+        "known_hour": 200
+      },
+      {
+        "machine": "m022",
+        "start_hour": 800,
+        "end_hour": 1300,
+        "load": 1.33,
+        "known_hour": 800
+      },
+      {
+        "machine": "m022",
+        "start_hour": 1400,
+        "end_hour": 1800,
+        "load": 0.58,
+        "known_hour": 1400
+      },
+      {
+        "machine": "m023",
+        "start_hour": 300,
+        "end_hour": 800,
+        "load": 1.33,
+        "known_hour": 300
+      },
+      {
+        "machine": "m023",
+        "start_hour": 900,
+        "end_hour": 1400,
+        "load": 1.44,
+        "known_hour": 900
+      },
+      {
+        "machine": "m023",
+        "start_hour": 1500,
+        "end_hour": 2000,
+        "load": 0.62,
+        "known_hour": 1500
+      },
+      {
+        "machine": "m023",
+        "start_hour": 2100,
+        "end_hour": 2400,
+        "load": 0.9,
+        "known_hour": 2100
+      },
+      {
+        "machine": "m024",
+        "start_hour": 0,
+        "end_hour": 500,
+        "load": 1.19,
+        "known_hour": 0
+      },
+      {
+        "machine": "m024",
+        "start_hour": 600,
+        "end_hour": 1100,
+        "load": 1.15,
+        "known_hour": 600
+      },
+      {
+        "machine": "m024",
+        "start_hour": 1200,
+        "end_hour": 1700,
+        "load": 1.09,
+        "known_hour": 1200
+      },
+      {
+        "machine": "m024",
+        "start_hour": 1800,
+        "end_hour": 2300,
+        "load": 0.91,
+        "known_hour": 1800
+      },
+      {
+        "machine": "m025",
+        "start_hour": 100,
+        "end_hour": 600,
+        "load": 1.04,
+        "known_hour": 100
+      },
+      {
+        "machine": "m025",
+        "start_hour": 700,
+        "end_hour": 1200,
+        "load": 1.14,
+        "known_hour": 700
+      },
+      {
+        "machine": "m025",
+        "start_hour": 1300,
+        "end_hour": 1800,
+        "load": 1.07,
+        "known_hour": 1300
+      },
+      {
+        "machine": "m025",
+        "start_hour": 1900,
+        "end_hour": 2400,
+        "load": 1.04,
+        "known_hour": 1900
+      },
+      {
+        "machine": "m026",
+        "start_hour": 200,
+        "end_hour": 700,
+        "load": 0.71,
+        "known_hour": 200
+      },
+      {
+        "machine": "m026",
+        "start_hour": 800,
+        "end_hour": 1300,
+        "load": 0.8,
+        "known_hour": 800
+      },
+      {
+        "machine": "m026",
+        "start_hour": 1400,
+        "end_hour": 1900,
+        "load": 1.36,
+        "known_hour": 1400
+      },
+      {
+        "machine": "m026",
+        "start_hour": 2000,
+        "end_hour": 2400,
+        "load": 1.17,
+        "known_hour": 2000
+      },
+      {
+        "machine": "m027",
+        "start_hour": 300,
+        "end_hour": 800,
+        "load": 0.97,
+        "known_hour": 300
+      },
+      {
+        "machine": "m027",
+        "start_hour": 900,
+        "end_hour": 1400,
+        "load": 1.49,
+        "known_hour": 900
+      },
+      {
+        "machine": "m027",
+        "start_hour": 1500,
+        "end_hour": 2000,
+        "load": 1.34,
+        "known_hour": 1500
+      },
+      {
+        "machine": "m027",
+        "start_hour": 2100,
+        "end_hour": 2400,
+        "load": 1.42,
+        "known_hour": 2100
+      },
+      {
+        "machine": "m028",
+        "start_hour": 0,
+        "end_hour": 500,
+        "load": 1.37,
+        "known_hour": 0
+      },
+      {
+        "machine": "m028",
+        "start_hour": 600,
+        "end_hour": 1100,
+        "load": 0.99,
+        "known_hour": 600
+      },
+      {
+        "machine": "m028",
+        "start_hour": 1200,
+        "end_hour": 1700,
+        "load": 1.14,
+        "known_hour": 1200
+      },
+      {
+        "machine": "m028",
+        "start_hour": 1800,
+        "end_hour": 2300,
+        "load": 1.35,
+        "known_hour": 1800
+      },
+      {
+        "machine": "m029",
+        "start_hour": 100,
+        "end_hour": 600,
+        "load": 1.22,
+        "known_hour": 100
+      },
+      {
+        "machine": "m029",
+        "start_hour": 700,
+        "end_hour": 1200,
+        "load": 1.41,
+        "known_hour": 700
+      },
+      {
+        "machine": "m029",
+        "start_hour": 1300,
+        "end_hour": 1800,
+        "load": 0.59,
+        "known_hour": 1300
+      },
+      {
+        "machine": "m029",
+        "start_hour": 1900,
+        "end_hour": 2400,
+        "load": 0.86,
+        "known_hour": 1900
+      },
+      {
+        "machine": "m030",
+        "start_hour": 200,
+        "end_hour": 700,
+        "load": 1.49,
+        "known_hour": 200
+      },
+      {
+        "machine": "m030",
+        "start_hour": 800,
+        "end_hour": 1300,
+        "load": 0.87,
+        "known_hour": 800
+      },
+      {
+        "machine": "m030",
+        "start_hour": 1400,
+        "end_hour": 1900,
+        "load": 0.62,
+        "known_hour": 1400
+      },
+      {
+        "machine": "m030",
+        "start_hour": 2000,
+        "end_hour": 2400,
+        "load": 1.25,
+        "known_hour": 2000
+      },
+      {
+        "machine": "m031",
+        "start_hour": 300,
+        "end_hour": 800,
+        "load": 0.68,
+        "known_hour": 300
+      },
+      {
+        "machine": "m031",
+        "start_hour": 900,
+        "end_hour": 1400,
+        "load": 0.54,
+        "known_hour": 900
+      },
+      {
+        "machine": "m031",
+        "start_hour": 1500,
+        "end_hour": 2000,
+        "load": 0.74,
+        "known_hour": 1500
+      },
+      {
+        "machine": "m031",
+        "start_hour": 2100,
+        "end_hour": 2400,
+        "load": 1.08,
+        "known_hour": 2100
+      },
+      {
+        "machine": "m032",
+        "start_hour": 0,
+        "end_hour": 500,
+        "load": 0.53,
+        "known_hour": 0
+      },
+      {
+        "machine": "m032",
+        "start_hour": 600,
+        "end_hour": 1100,
+        "load": 0.64,
+        "known_hour": 600
+      },
+      {
+        "machine": "m032",
+        "start_hour": 1200,
+        "end_hour": 1700,
+        "load": 1.06,
+        "known_hour": 1200
+      },
+      {
+        "machine": "m032",
+        "start_hour": 1800,
+        "end_hour": 2300,
+        "load": 0.99,
+        "known_hour": 1800
+      },
+      {
+        "machine": "m033",
+        "start_hour": 100,
+        "end_hour": 600,
+        "load": 0.9,
+        "known_hour": 100
+      },
+      {
+        "machine": "m033",
+        "start_hour": 700,
+        "end_hour": 1200,
+        "load": 0.91,
+        "known_hour": 700
+      },
+      {
+        "machine": "m033",
+        "start_hour": 1300,
+        "end_hour": 1800,
+        "load": 0.7,
+        "known_hour": 1300
+      },
+      {
+        "machine": "m034",
+        "start_hour": 200,
+        "end_hour": 700,
+        "load": 1.39,
+        "known_hour": 200
+      },
+      {
+        "machine": "m034",
+        "start_hour": 800,
+        "end_hour": 1300,
+        "load": 0.51,
+        "known_hour": 800
+      },
+      {
+        "machine": "m034",
+        "start_hour": 1400,
+        "end_hour": 1900,
+        "load": 0.58,
+        "known_hour": 1400
+      },
+      {
+        "machine": "m034",
+        "start_hour": 2000,
+        "end_hour": 2400,
+        "load": 0.65,
+        "known_hour": 2000
+      },
+      {
+        "machine": "m035",
+        "start_hour": 300,
+        "end_hour": 800,
+        "load": 0.71,
+        "known_hour": 300
+      },
+      {
+        "machine": "m035",
+        "start_hour": 900,
+        "end_hour": 1400,
+        "load": 1.25,
+        "known_hour": 900
+      },
+      {
+        "machine": "m035",
+        "start_hour": 1500,
+        "end_hour": 2000,
+        "load": 1.35,
+        "known_hour": 1500
+      },
+      {
+        "machine": "m035",
+        "start_hour": 2100,
+        "end_hour": 2400,
+        "load": 0.92,
+        "known_hour": 2100
+      },
+      {
+        "machine": "m036",
+        "start_hour": 0,
+        "end_hour": 500,
+        "load": 0.53,
+        "known_hour": 0
+      },
+      {
+        "machine": "m036",
+        "start_hour": 600,
+        "end_hour": 1100,
+        "load": 0.82,
+        "known_hour": 600
+      },
+      {
+        "machine": "m036",
+        "start_hour": 1200,
+        "end_hour": 1700,
+        "load": 1.42,
+        "known_hour": 1200
+      },
+      {
+        "machine": "m036",
+        "start_hour": 1800,
+        "end_hour": 2300,
+        "load": 1.38,
+        "known_hour": 1800
+      },
+      {
+        "machine": "m037",
+        "start_hour": 100,
+        "end_hour": 600,
+        "load": 1.42,
+        "known_hour": 100
+      },
+      {
+        "machine": "m037",
+        "start_hour": 700,
+        "end_hour": 1200,
+        "load": 0.74,
+        "known_hour": 700
+      },
+      {
+        "machine": "m037",
+        "start_hour": 1300,
+        "end_hour": 1800,
+        "load": 1.32,
+        "known_hour": 1300
+      },
+      {
+        "machine": "m037",
+        "start_hour": 1900,
+        "end_hour": 2400,
+        "load": 0.95,
+        "known_hour": 1900
+      },
+      {
+        "machine": "m038",
+        "start_hour": 200,
+        "end_hour": 700,
+        "load": 0.53,
+        "known_hour": 200
+      },
+      {
+        "machine": "m038",
+        "start_hour": 800,
+        "end_hour": 1300,
+        "load": 1.03,
+        "known_hour": 800
+      },
+      {
+        "machine": "m038",
+        "start_hour": 1400,
+        "end_hour": 1900,
+        "load": 1.29,
+        "known_hour": 1400
+      },
+      {
+        "machine": "m038",
+        "start_hour": 2000,
+        "end_hour": 2400,
+        "load": 1.1,
+        "known_hour": 2000
+      },
+      {
+        "machine": "m039",
+        "start_hour": 300,
+        "end_hour": 800,
+        "load": 0.79,
+        "known_hour": 300
+      },
+      {
+        "machine": "m039",
+        "start_hour": 900,
+        "end_hour": 1400,
+        "load": 1.28,
+        "known_hour": 900
+      },
+      {
+        "machine": "m039",
+        "start_hour": 1500,
+        "end_hour": 2000,
+        "load": 1.4,
+        "known_hour": 1500
+      },
+      {
+        "machine": "m039",
+        "start_hour": 2100,
+        "end_hour": 2400,
+        "load": 1.14,
+        "known_hour": 2100
+      },
+      {
+        "machine": "m040",
+        "start_hour": 0,
+        "end_hour": 500,
+        "load": 0.76,
+        "known_hour": 0
+      },
+      {
+        "machine": "m040",
+        "start_hour": 600,
+        "end_hour": 1100,
+        "load": 1.43,
+        "known_hour": 600
+      },
+      {
+        "machine": "m040",
+        "start_hour": 1200,
+        "end_hour": 1700,
+        "load": 1.18,
+        "known_hour": 1200
+      },
+      {
+        "machine": "m040",
+        "start_hour": 1800,
+        "end_hour": 2300,
+        "load": 0.79,
+        "known_hour": 1800
+      },
+      {
+        "machine": "m041",
+        "start_hour": 100,
+        "end_hour": 600,
+        "load": 0.86,
+        "known_hour": 100
+      },
+      {
+        "machine": "m041",
+        "start_hour": 700,
+        "end_hour": 1200,
+        "load": 1.46,
+        "known_hour": 700
+      },
+      {
+        "machine": "m041",
+        "start_hour": 1300,
+        "end_hour": 1800,
+        "load": 0.94,
+        "known_hour": 1300
+      },
+      {
+        "machine": "m041",
+        "start_hour": 1900,
+        "end_hour": 2400,
+        "load": 0.91,
+        "known_hour": 1900
+      },
+      {
+        "machine": "m042",
+        "start_hour": 200,
+        "end_hour": 700,
+        "load": 0.51,
+        "known_hour": 200
+      },
+      {
+        "machine": "m042",
+        "start_hour": 800,
+        "end_hour": 1300,
+        "load": 1.1,
+        "known_hour": 800
+      },
+      {
+        "machine": "m042",
+        "start_hour": 1400,
+        "end_hour": 1900,
+        "load": 0.85,
+        "known_hour": 1400
+      },
+      {
+        "machine": "m042",
+        "start_hour": 2000,
+        "end_hour": 2400,
+        "load": 1.2,
+        "known_hour": 2000
+      },
+      {
+        "machine": "m043",
+        "start_hour": 300,
+        "end_hour": 800,
+        "load": 0.97,
+        "known_hour": 300
+      },
+      {
+        "machine": "m043",
+        "start_hour": 900,
+        "end_hour": 1400,
+        "load": 0.7,
+        "known_hour": 900
+      },
+      {
+        "machine": "m043",
+        "start_hour": 1500,
+        "end_hour": 2000,
+        "load": 0.75,
+        "known_hour": 1500
+      },
+      {
+        "machine": "m043",
+        "start_hour": 2100,
+        "end_hour": 2400,
+        "load": 1.24,
+        "known_hour": 2100
+      },
+      {
+        "machine": "m044",
+        "start_hour": 0,
+        "end_hour": 500,
+        "load": 0.81,
+        "known_hour": 0
+      },
+      {
+        "machine": "m044",
+        "start_hour": 600,
+        "end_hour": 1100,
+        "load": 1.03,
+        "known_hour": 600
+      },
+      {
+        "machine": "m044",
+        "start_hour": 1200,
+        "end_hour": 1700,
+        "load": 1.42,
+        "known_hour": 1200
+      },
+      {
+        "machine": "m045",
+        "start_hour": 100,
+        "end_hour": 600,
+        "load": 1.0,
+        "known_hour": 100
+      },
+      {
+        "machine": "m045",
+        "start_hour": 700,
+        "end_hour": 1200,
+        "load": 0.51,
+        "known_hour": 700
+      },
+      {
+        "machine": "m045",
+        "start_hour": 1300,
+        "end_hour": 1800,
+        "load": 1.35,
+        "known_hour": 1300
+      },
+      {
+        "machine": "m045",
+        "start_hour": 1900,
+        "end_hour": 2400,
+        "load": 0.86,
+        "known_hour": 1900
+      },
+      {
+        "machine": "m046",
+        "start_hour": 200,
+        "end_hour": 700,
+        "load": 0.87,
+        "known_hour": 200
+      },
+      {
+        "machine": "m046",
+        "start_hour": 800,
+        "end_hour": 1300,
+        "load": 1.23,
+        "known_hour": 800
+      },
+      {
+        "machine": "m046",
+        "start_hour": 1400,
+        "end_hour": 1900,
+        "load": 0.88,
+        "known_hour": 1400
+      },
+      {
+        "machine": "m046",
+        "start_hour": 2000,
+        "end_hour": 2400,
+        "load": 1.38,
+        "known_hour": 2000
+      },
+      {
+        "machine": "m047",
+        "start_hour": 300,
+        "end_hour": 800,
+        "load": 0.79,
+        "known_hour": 300
+      },
+      {
+        "machine": "m047",
+        "start_hour": 900,
+        "end_hour": 1400,
+        "load": 1.43,
+        "known_hour": 900
+      },
+      {
+        "machine": "m047",
+        "start_hour": 1500,
+        "end_hour": 2000,
+        "load": 1.07,
+        "known_hour": 1500
+      },
+      {
+        "machine": "m047",
+        "start_hour": 2100,
+        "end_hour": 2400,
+        "load": 1.05,
+        "known_hour": 2100
+      },
+      {
+        "machine": "m001",
+        "start_hour": 1900,
+        "end_hour": 2400,
+        "load": 1.48,
+        "known_hour": 1900
+      }
+    ],
+    "events": [
+      {
+        "event": "m000-f",
+        "machine": "m000",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m000-i",
+        "machine": "m000",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m000-r",
+        "machine": "m000",
+        "hour": 1800,
+        "known_hour": 1810,
+        "kind": "retire"
+      },
+      {
+        "event": "m001-i",
+        "machine": "m001",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m002-i",
+        "machine": "m002",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m003-f",
+        "machine": "m003",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m003-i",
+        "machine": "m003",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m004-i",
+        "machine": "m004",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m005-i",
+        "machine": "m005",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m006-f",
+        "machine": "m006",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m006-i",
+        "machine": "m006",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m007-i",
+        "machine": "m007",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m008-i",
+        "machine": "m008",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m009-f",
+        "machine": "m009",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m009-i",
+        "machine": "m009",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m010-i",
+        "machine": "m010",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m011-i",
+        "machine": "m011",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m011-r",
+        "machine": "m011",
+        "hour": 1800,
+        "known_hour": 1810,
+        "kind": "retire"
+      },
+      {
+        "event": "m012-f",
+        "machine": "m012",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m012-i",
+        "machine": "m012",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m013-i",
+        "machine": "m013",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m014-i",
+        "machine": "m014",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m015-f",
+        "machine": "m015",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m015-i",
+        "machine": "m015",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m016-i",
+        "machine": "m016",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m017-i",
+        "machine": "m017",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m018-f",
+        "machine": "m018",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m018-i",
+        "machine": "m018",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m019-i",
+        "machine": "m019",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m020-i",
+        "machine": "m020",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m021-f",
+        "machine": "m021",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m021-i",
+        "machine": "m021",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m022-i",
+        "machine": "m022",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m022-r",
+        "machine": "m022",
+        "hour": 1800,
+        "known_hour": 1810,
+        "kind": "retire"
+      },
+      {
+        "event": "m023-i",
+        "machine": "m023",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m024-f",
+        "machine": "m024",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m024-i",
+        "machine": "m024",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m025-i",
+        "machine": "m025",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m026-i",
+        "machine": "m026",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m027-f",
+        "machine": "m027",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m027-i",
+        "machine": "m027",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m028-i",
+        "machine": "m028",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m029-i",
+        "machine": "m029",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m030-f",
+        "machine": "m030",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m030-i",
+        "machine": "m030",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m031-i",
+        "machine": "m031",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m032-i",
+        "machine": "m032",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m033-f",
+        "machine": "m033",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m033-i",
+        "machine": "m033",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m033-r",
+        "machine": "m033",
+        "hour": 1800,
+        "known_hour": 1810,
+        "kind": "retire"
+      },
+      {
+        "event": "m034-i",
+        "machine": "m034",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m035-i",
+        "machine": "m035",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m036-f",
+        "machine": "m036",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m036-i",
+        "machine": "m036",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m037-i",
+        "machine": "m037",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m038-i",
+        "machine": "m038",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m039-f",
+        "machine": "m039",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m039-i",
+        "machine": "m039",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m040-i",
+        "machine": "m040",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m041-i",
+        "machine": "m041",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m042-f",
+        "machine": "m042",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m042-i",
+        "machine": "m042",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m043-i",
+        "machine": "m043",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m044-i",
+        "machine": "m044",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m044-r",
+        "machine": "m044",
+        "hour": 1800,
+        "known_hour": 1810,
+        "kind": "retire"
+      },
+      {
+        "event": "m045-f",
+        "machine": "m045",
+        "hour": 1000,
+        "known_hour": 1010,
+        "kind": "failure"
+      },
+      {
+        "event": "m045-i",
+        "machine": "m045",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m046-i",
+        "machine": "m046",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      },
+      {
+        "event": "m047-i",
+        "machine": "m047",
+        "hour": 1500,
+        "known_hour": 1500,
+        "kind": "inspection"
+      }
+    ],
+    "repairs": [
+      {
+        "machine": "m000",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "overhaul"
+      },
+      {
+        "machine": "m003",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "minor"
+      },
+      {
+        "machine": "m006",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "overhaul"
+      },
+      {
+        "machine": "m009",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "minor"
+      },
+      {
+        "machine": "m012",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "overhaul"
+      },
+      {
+        "machine": "m015",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "minor"
+      },
+      {
+        "machine": "m018",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "overhaul"
+      },
+      {
+        "machine": "m021",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "minor"
+      },
+      {
+        "machine": "m024",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "overhaul"
+      },
+      {
+        "machine": "m027",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "minor"
+      },
+      {
+        "machine": "m030",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "overhaul"
+      },
+      {
+        "machine": "m033",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "minor"
+      },
+      {
+        "machine": "m036",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "overhaul"
+      },
+      {
+        "machine": "m039",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "minor"
+      },
+      {
+        "machine": "m042",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "overhaul"
+      },
+      {
+        "machine": "m045",
+        "hour": 1100,
+        "known_hour": 1100,
+        "grade": "minor"
+      }
+    ]
+  }
+}
