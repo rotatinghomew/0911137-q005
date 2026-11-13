@@ -1,0 +1,9 @@
+{
+  "name": "fleet-reliability-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m fleet_reliability",
+    "test:browser": "python3 tests/browser_smoke.py"
+  }
+}
