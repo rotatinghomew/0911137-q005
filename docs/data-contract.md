@@ -1,6 +1,6 @@
 # 资料口径
 
-intervals 是半开运行小时区间 [start_hour,end_hour)，负荷 load 是区间常数；不在区间内不累计暴露。events 的 kind 区分 failure、retire、inspection，known_hour 是获知时刻；repairs 的 overhaul 表示大修，minor 表示小修，不预先规定风险模型。机器编号不能跨站合并。基线提供事件计数与有效运行暴露。
+intervals 是半开运行小时区间 [start_hour,end_hour)，负荷 load 是区间常数；不在区间内不累计暴露。events 的 kind 区分 failure、retire、inspection，known_hour 是获知时刻；repairs 的 overhaul 表示大修，minor 表示小修，不预先规定风险模型。机器编号不能跨站合并。基线提供事件计数与有效运行暴露；风险估计如何使用这些记录见 `risk-methodology.md`（故障与报废为竞争结局、大修按等级解释为年龄重置、小修不重置）。
 
 ## 现有资料
 

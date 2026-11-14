@@ -8,7 +8,7 @@ import threading
 from urllib.parse import parse_qs, urlsplit
 from urllib.request import Request, urlopen
 
-from .domain import run
+from .domain import DEFAULT_HORIZON_HOURS, risk_analysis, run
 from .storage import AnalysisStore, read_dataset
 
 
@@ -26,8 +26,8 @@ class Application:
         return {**data['meta'], 'digest': digest, 'tables': {name: len(rows) for name, rows in data['tables'].items()}}
 
     def analyze(self, supplied):
-        if not isinstance(supplied, dict) or set(supplied) - {'cutoff', 'group'}:
-            raise ValueError('只接受 cutoff 和 group 筛选项')
+        if not isinstance(supplied, dict) or set(supplied) - {'cutoff', 'group', 'horizon_hours'}:
+            raise ValueError('只接受 cutoff、group 和 horizon_hours 筛选项')
         data, digest = read_dataset(self.dataset)
         cutoff = supplied.get('cutoff', data['meta']['default_cutoff'])
         try:
@@ -41,9 +41,32 @@ class Application:
             raise ValueError('未知分析范围')
         if not data['meta']['min_cutoff'] <= cutoff <= data['meta']['max_cutoff']:
             raise ValueError('分析时点超出资料范围')
-        options = {'cutoff': cutoff, 'group': group}
-        result = run(data['tables'], options)
+        horizon = supplied.get('horizon_hours', DEFAULT_HORIZON_HOURS)
+        try:
+            if isinstance(horizon, bool) or float(horizon) != int(horizon) or int(horizon) <= 0:
+                raise ValueError()
+            horizon = int(horizon)
+        except (TypeError, ValueError, OverflowError):
+            raise ValueError('预测窗口须为正整数运行小时') from None
+        if horizon > data['meta']['max_cutoff']:
+            raise ValueError('预测窗口超出资料范围')
+        options = {'cutoff': cutoff, 'group': group, 'horizon_hours': horizon}
+        result = run(data['tables'], {'cutoff': cutoff, 'group': group})
+        result['risk'] = risk_analysis(data['tables'], options)['risk']
         return {'digest': digest, 'options': options, 'result': result}
+
+    def machine_detail(self, supplied):
+        if not isinstance(supplied, dict) or set(supplied) - {'cutoff', 'horizon_hours', 'machine', 'group'}:
+            raise ValueError('设备查询只接受 machine、cutoff、group 和 horizon_hours')
+        analyzed = self.analyze({key: value for key, value in supplied.items() if key != 'machine'})
+        identifier = supplied.get('machine', '')
+        if not isinstance(identifier, str) or not identifier:
+            raise ValueError('缺少设备编号')
+        match = next((row for row in analyzed['result']['risk']['machines']
+                      if row['machine'] == identifier), None)
+        if match is None:
+            raise KeyError('设备不在当前资料或分析时点之后才安装')
+        return {'digest': analyzed['digest'], 'options': analyzed['options'], 'machine': match}
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -70,6 +93,8 @@ class Handler(BaseHTTPRequestHandler):
                 value = self.application.catalog()
             elif request.path == '/api/view':
                 value = self.application.analyze(query)
+            elif request.path == '/api/machine':
+                value = self.application.machine_detail(query)
             elif request.path == '/api/analyses':
                 value = self.application.store.list()
             elif request.path.startswith('/api/analyses/'):

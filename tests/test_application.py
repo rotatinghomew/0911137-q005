@@ -1,3 +1,4 @@
+import copy
 import json
 from pathlib import Path
 import tempfile
@@ -65,7 +66,7 @@ class ApplicationTests(unittest.TestCase):
         value = self.application.analyze({})
         saved = self.application.store.save('保留版本', value['digest'], value['options'], value['result'])
         reloaded = Application(self.application.dataset, self.application.store.path, ROOT / 'web')
-        changed = dict(value['result'])
+        changed = copy.deepcopy(value['result'])
         changed['notes'] = ['后续操作']
         reloaded.store.save('另一次分析', value['digest'], value['options'], changed)
         self.assertEqual(reloaded.store.get(saved['id'])['result'], value['result'])

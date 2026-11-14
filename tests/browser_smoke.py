@@ -38,6 +38,22 @@ def main():
                 page.goto(base)
                 page.wait_for_function("document.querySelector('#status').textContent === '分析已更新'")
                 assert page.locator('#results tbody tr').count() > 0
+                # 风险区：状态卡片、借用证据、备件范围与设备明细都已渲染
+                page.wait_for_selector('#machine-list tbody tr')
+                assert page.locator('#risk-statuses .card').count() >= 5
+                assert page.locator('#borrowing tbody tr').count() > 0
+                assert page.locator('#spares tbody tr').count() == 2
+                # 打开设备页：超龄设备必须显示明确状态而不是编造精确风险
+                page.locator('#machine-list tbody button', has_text='m001').first.click()
+                page.wait_for_selector('#machine-detail h3')
+                detail_text = page.locator('#machine-detail').inner_text()
+                assert 'm001' in detail_text
+                assert '不提供点估计' in detail_text or '上界' in detail_text
+                # 调整预测窗口后风险区刷新
+                page.locator('#filters input[name="horizon_hours"]').fill('360')
+                page.get_by_role('button', name='更新分析', exact=True).click()
+                page.wait_for_function("document.querySelector('#status').textContent === '分析已更新'")
+                assert page.locator('#machine-list tbody tr').count() > 0
                 page.locator('#filters select').select_option(catalog['groups'][0])
                 page.get_by_role('button', name='更新分析', exact=True).click()
                 page.wait_for_function("document.querySelector('#status').textContent === '分析已更新'")
